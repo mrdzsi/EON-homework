@@ -6,3 +6,8 @@ env
 *.sqlite3
 
 staticfiles
+
+.terraform*
+AzureCLI.msi
+terraform.tfstate
+
