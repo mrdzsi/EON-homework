@@ -13,32 +13,32 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "example" {
-  name     = "example-resources"
+resource "azurerm_resource_group" "eon-rg" {
+  name     = "eon-rg"
   location = "West Europe"
 }
 
-resource "azurerm_container_group" "example" {
-  name                = "example-continst"
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
+resource "azurerm_container_group" "eon-cg" {
+  name                = "eon-cg"
+  location            = azurerm_resource_group.eon-rg.location
+  resource_group_name = azurerm_resource_group.eon-rg.name
   ip_address_type     = "Public"
-  dns_name_label      = "aci-label-example"
+  dns_name_label      = "eon-homework"
   os_type             = "Linux"
 
   container {
-    name   = "eon-homework"
-    image  = "mrdzsi/eon-homework:v0.0"
+    name   = "eon-container"
+    image  = "mrdzsi/eon-homework"
     cpu    = "1"
     memory = "1"
 
     ports {
-      port     = 443
+      port     = 80
       protocol = "TCP"
     }
   }
 
   tags = {
-    environment = "testing"
+    environment = "eon"
   }
 }
