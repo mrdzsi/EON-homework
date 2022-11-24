@@ -28,7 +28,7 @@ resource "azurerm_container_group" "eon-cg" {
 
   container {
     name   = "eon-container"
-    image  = "mrdzsi/eon-homework"
+    image  = "mrdzsi/eon-homework:v1.0"
     cpu    = "1"
     memory = "1"
 
