@@ -11,3 +11,4 @@ staticfiles
 AzureCLI.msi
 terraform.tfstate
 
+*.png
