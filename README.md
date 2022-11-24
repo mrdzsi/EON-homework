@@ -1,7 +1,5 @@
 #  Real World App in Azure with Terraform
 
-How to run the app locally can be found on main branch README. 
-
 Manual steps taken to deploy the app to Azure Container Instance: 
 
 - Creating Dockerfile & main.tf
